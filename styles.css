@@ -1,23 +1,385 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+html {
     background-color: rgba(122, 191, 191, .5);
+    font-family: 'Montserrat', sans-serif;
 }
-body{
-    background-color: #f2f2f2;
+
+body {
     width: 80%;
     margin: 0 auto;
+    background-color: #f2f2f2;
 }
-h2{
+a{
+    text-decoration: none;
+    color: #eb5428;
+}
+a:hover{
+    color: hsl(14, 83%, 25%);
+}
+a.hidden{
+    visibility: hidden;
+}a.hidden:hover{
+    visibility: hidden;
+}
+
+h1 {
     text-align: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 3rem;
 }
-header ul{
-    position:absolute;
-    background-color: rgb(242, 242, 242,.75);
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
 }
-header ul, footer ul{
+p{
+    font-size: 1.1rem;
+}
+li{
+    font-size: 1.1rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Bebas Neue';
+}
+
+header {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 9fr 1fr 1fr;
+    height: 350px;
 }
-header li, footer li{
+
+header h1 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-bottom: 20px;
+}
+
+header ul {
+    /* background-color: rgb(242, 242, 242,.75); */
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: rgb(242, 242, 242, .5);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #eb5428;
+    text-transform: uppercase;
+    align-content: end;
+    padding-bottom: 10px;
+}
+
+header ul,
+footer ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+header li,
+footer li {
+    display: inline-block;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 50px;
+    height: 1rem;
+    width: 40px;
+    padding-top: 50px;
+    padding-bottom: 5px;
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header li:nth-child(1) {
+    background-image: url(SVG/save.svg);
+}
+
+header li:nth-child(2) {
+    background-image: url(SVG/share.svg);
+}
+
+header li:nth-child(3) {
+    background-image: url(SVG/print.svg);
+}
+
+header li:nth-child(4) {
+    background-image: url(SVG/jump.svg);
+    width: 120px;
+}
+
+main {
+    margin-bottom: 0;
+}
+
+main img {
+    width: 100%;
+}
+
+main p {
+    margin: 1rem;
+}
+
+div#details li {
+    list-style: none;
+    padding-left: 5px;
+}
+
+mark {
+    font-weight: bold;
+    background-color: transparent;
+}
+
+div#ingredients li {
+    list-style:square;
+    margin-left: 5px;
+}
+
+/*Recipe*/
+section#recipe {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 1rem;
+    padding-left: 0;
+}
+
+section#recipe ol,
+section#recipe ul {
+    padding-left: 1.5rem;
+}
+
+div#details ul {
+    padding-left: .5rem;
+}
+
+/*Aside*/
+aside {
+    background-color: #7abfbf;
+    margin-top: 0;
+}
+
+dt {
+    text-transform: uppercase;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+aside div {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: .1fr 1fr;
+}
+
+div h3 {
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+}
+
+figcaption mark {
+    margin: 0;
+    padding: 0;
+}
+
+figcaption p {
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+figcaption p:nth-child(3) {
+    /* display: inline;
+    width: 5rem; */
+    background-image: url(SVG/starOrange.svg), url(SVG/starOrange.svg), url(SVG/starOrange.svg), url(SVG/starOrange.svg), url(SVG/starWhite.svg);
+    color: rgb(255, 255, 255, 0);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: left, 30px, 60px, 90px, 120px;
+    background-size: 25px;
+}
+
+figcaption p.fiveStars {
+    background-image: url(SVG/starOrange.svg), url(SVG/starOrange.svg), url(SVG/starOrange.svg), url(SVG/starOrange.svg), url(SVG/starOrange.svg);
+}
+
+figure {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+figure img {
+    width: 100%;
+}
+
+dd.stars {
+    display: flex;
+}
+
+dd.stars img {
+    width: 25%;
+}
+
+span {
+    background-image: url(SVG/star.svg);
+    background-color: red;
+    height: 40px;
+    width: 40px;
+}
+
+/*nav*/
+nav {
+    display: grid;
+    grid-template-columns: .5fr 1fr .5fr;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    width: 80%;
+    padding: 0;
+    height: 80px;
+    box-shadow: 0px 5px 12px -5px rgb(0, 0, 0, .5);
+}
+
+menu {
+    position: absolute;
+    visibility: hidden;
+}
+
+nav h2:nth-child(1) {
+    background-image: url(SVG/burger.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 24px;
+    padding-top: 50px;
+    margin: 0;
+    height: 10px;
+    cursor: pointer;
+}
+
+nav h2:nth-child(2) {
+    background-image: url(SVG/logo.svg);
+    background-color: #eb5428;
+    color: rgb(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* padding-top: 60px; */
+    margin: 0;
+    cursor: pointer;
+}
+nav h2:nth-child(2):active {
+    background-color: hsl(14, 83%, 25%);
+
+}
+
+nav h2:nth-child(4) {
+    background-image: url(SVG/avatarOrange.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 24px;
+    padding-top: 50px;
+    margin: 0;
+    height: 10px;
+    cursor: pointer;
+}
+
+nav div {
+    position: absolute;
+    background-color: #eb5428;
+    background-image: url(SVG/search.svg);
+    background-size: 100%;
+    top: 130px;
+    left: 10%;
+    right: 10%;
+}
+
+nav button {
+    background-color: #eb5428;
+    background-image: url(SVG/searchWhite.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    color: rgb(0, 0, 0, 0);
+    height: 50px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #eb5428;
+    cursor: pointer;
+    width:40px;
+
+}
+nav button:active{
+    background-color: #fff;
+    background-image: url(SVG/search.svg);
+}
+
+nav input {
+    height: 50px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #eb5428;
+    width: 85%;
+}
+
+nav menu {
+    color: #eb5428;
+}
+
+
+nav li:nth-child(1) {
+    background-image: url(images/breakfast.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+nav li:nth-child(2) {
+    background-image: url(images/brunch.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+nav li:nth-child(3) {
+    background-image: url(images/lunch.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+nav li:nth-child(4) {
+    background-image: url(images/dinner.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+nav li:nth-child(5) {
+    background-image: url(images/appetizers.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+nav li:nth-child(6) {
+    background-image: url(images/desserts.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+nav li:nth-child(7) {
+    background-image: url(images/beverages.png);
+    background-size: 100%;
+    cursor: pointer;
+}
+
+nav li {
     display: inline-block;
     text-align: center;
     background-repeat: no-repeat;
@@ -27,99 +389,75 @@ header li, footer li{
     padding-top: 40px;
     padding-bottom: 5px;
 }
-header li:nth-child(1){
-    background-image:url(SVG/save.svg);
-}
-header li:nth-child(2){
-    background-image:url(SVG/share.svg);
-}
-header li:nth-child(3){
-    background-image:url(SVG/print.svg);
-}
-header li:nth-child(4){
-    background-image:url(SVG/jump.svg);
-    width: 120px;
-}
 
-main img{
-    width: 100%;
-}
-
-div#details li{
-    list-style: none;
-}
-mark{
-    font-weight: bold;
-    background-color: transparent;
-}
-div#ingredients li{
-    list-style:circle;
-}
-
-/*Aside*/
-aside{
-    background-color: #7abfbf;
-
-}
-dl div{
-    display: grid;
-    grid-template-columns: .5fr 1fr;
-    grid-template-rows: repeat(4,1fr);
-}
-div dd{
-    text-align: left;
-    padding: 0;
-}
-div dd:nth-child(2){
-    grid-row-start: 1;
-    grid-row-end: 4;
-}
-dd img{
-    width: 100%;
-}
-dd.stars{
-    display: flex;
-}
-dd.stars img{
-    width:25%;
-}
-span{
-    background-image:url(SVG/star.svg);
-    background-color: red;
-    height: 40px;
-    width:40px;
-}
 
 /*Footer*/
 
 /*footer icon formatting done in header*/
-footer{
-    text-align: center;
+footer {
     display: grid;
+    background-color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
 }
-footer .hidden{
+
+footer h2,
+footer h3 {
     display: none;
 }
-footer li:nth-child(1){
-    background-image:url(SVG/facebook.svg);
+
+footer ul {
+    color: #eb5428;
 }
-footer li:nth-child(2){
-    background-image:url(SVG/instagram.svg);
+
+footer li:nth-child(1) {
+    background-image: url(SVG/facebook.svg);
+    cursor: pointer;
 }
-footer li:nth-child(3){
-    background-image:url(SVG/youtube.svg);
+
+footer li:nth-child(2) {
+    background-image: url(SVG/instagram.svg);
+    cursor: pointer;
 }
-footer li:nth-child(4){
-    background-image:url(SVG/tiktok.svg);
+
+footer li:nth-child(3) {
+    background-image: url(SVG/youtube.svg);
+    cursor: pointer;
+}
+
+footer li:nth-child(4) {
+    background-image: url(SVG/tiktok.svg);
+    cursor: pointer;
     width: 80px;
 }
-footer img{
+
+footer img {
     width: 50%;
     align-items: center;
     grid-row-start: 2;
     grid-row-end: 3;
     margin: 0 auto;
+    padding-top: 20px;
 }
-footer small{
+
+footer small {
     grid-row-start: 3;
+    font-family: 'Bebas Neue';
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+@media screen and (min-width:768px) {
+    body {
+        background-color: red;
+    }
+
+}
+@media screen and (min-width:1280px) {
+    body {
+        background-color: violet;
+    }
+
 }

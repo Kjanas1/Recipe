@@ -15,10 +15,10 @@
     <header>
         <h1>Street Tacos</h1>
         <ul>
-            <li>Save</li> <!--Use css to add icons as background images-->
-            <li>Share</li>
-            <li>Print</li>
-            <li>Jump to Recipe</li>
+            <li><a href="*">Save</a></li> <!--Use css to add icons as background images-->
+            <li><a href="*">Share</a></li>
+            <li><a href="*">Print</a></li>
+            <li><a href="*">Jump to Recipe</a></li>
         </ul>
     </header>
 
@@ -77,63 +77,76 @@
 
     <aside>
         <h2>Need some side dishes?</h2>
-        <dl>
-            <div>
-                <dt>Mexican Rice</dt>
-                <dd><img src=images/mexican-rice.png alt="">
-                <dd>Traditional recipe with a twist.</dd>
-                <dd>Rating: 4 of 5 Stars</dd>
-                <dd class="stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starWhite.svg" alt="4 of 5 Stars"></dd>
-            </div>
-            <div>
-                <dt>Salsa</dt>
-                <dd><img src=images/salsa.png alt=""></dd>
-                <dd>Just the right amount of spice.</dd>
-                <dd>Rating: 5 of 5 Stars</dd>
-                <dd class="stars"><img src="SVG/starOrange.svg" alt="5 of 5 Stars"><img src="SVG/starOrange.svg" alt="5 of 5 Stars"><img src="SVG/starOrange.svg" alt="5 of 5 Stars"><img src="SVG/starOrange.svg" alt="5 of 5 Stars"><img src="SVG/starOrange.svg" alt="5 of 5 Stars"></dd>
-            </div>
-            <div>
-                <dt>Guacamole</dt>
-                <dd><img src=images/guacamole.png alt=""></dd>
-                <dd>Fresh and healthy.</dd>
-                <dd>Rating: 4 of 5 Stars</dd>
-                <dd class="stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starWhite.svg" alt="4 of 5 Stars"></dd>
-            </div>
-            <div>
-                <dt>Tortillas</dt>
-                <dd><img src=images/tortillas.png alt=""></dd>
-                <dd>Easy to make and so good.</dd>
-                <dd>Rating: 4 of 5 Stars</dd>
-                <dd class="stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starOrange.svg" alt="4 of 5 Stars"><img src="SVG/starWhite.svg" alt="4 of 5 Stars"></dd>
-            </div>
-        </dl>
+        <div>
+            <h3>Mexican Rice</h3>
+            <figure><img src=images/mexican-rice.png alt=""></figure>
+            <figcaption>
+                <p>Traditional recipe with a twist.</p>
+                <mark>Rating</mark>
+                <p>4 of 5 stars</p>
+            </figcaption>
+        </div>
+        <div>
+            <h3>Salsa</h3>
+            <figure><img src=images/salsa.png alt=""></figure>
+            <figcaption>
+                <p>Just the right amount of spice.</p>
+                <mark>Rating</mark>
+                <p class="fiveStars">5 of 5 Stars</p>
+            </figcaption>
+        </div>
+        <div>
+            <h3>Guacamole</h3>
+            <figure><img src=images/guacamole.png alt=""></figure>
+            <figcaption>
+                <p>Fresh and healthy.</p>
+                <mark>Rating</mark>
+                <p>4 of 5 Stars</p>
+            </figcaption>
+        </div>
+        <div>
+            <h3>Tortillas</h3>
+            <figure><img src=images/tortillas.png alt=""></figure>
+            <figcaption>
+                <p>Easy to make and so good.</p>
+                <mark>Rating</mark>
+                <p>4 of 5 Stars</p>
+            </figcaption>
+        </div>
     </aside>
 
-        <nav>
-            <>Main Navigation (hamburger svg)
-                <ul>
-                    <li>Home</li>(logo svg)
-                    <li>Breakfast</li> (breakfast.png)
-                    <li>Brunch</li> (brunch.png)
-                    <li>Lunch</li> (lunch.png)
-                    <li>Dinner</li> (dinner.png)
-                    <li>Appetizers</li> (appetizers.png)
-                    <li>Desserts</li> (desserts.png)
-                    <li>Beverages</li> (beverages.png)
-                </ul>(avatar svg)
-                <>Search (search svg)
-                    <>Connect<!--sign in?-->
-        </nav>
+    <nav>
+        <h2><a href="*">Menu</a></h2>
+        <h2><a href="*" class="hidden">Home</a></h2>
+        <menu>
+            <li><a href="*">Breakfast</a></li>
+            <li><a href="*">Brunch</a></li>
+            <li><a href="*">Lunch</a></li>
+            <li><a href="*">Dinner</a></li>
+            <li><a href="*">Appetizers</a></li>
+            <li><a href="*">Desserts</a></li>
+            <li><a href="*">Beverages</a></li>
+        </menu>
+        <h2><a href="*">Sign in</a></h2>
+        <div>
+            <!-- <label for="site-search">Search the site:</label> -->
+            <form class="search" action="*"></form><input type="text" id="site-search" name="search"
+                placeholder="Find a recipe" />
+            <button type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
 
     <footer>
-        <div class="hidden">Media Links</div><!--???-->
+        <h2>Connect</h2>
+        <h3>Media Links</h3>
         <ul>
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>YouTube</li>
-            <li>Tik Tok</li>
+            <li><a href="*"></a>Facebook</li>
+            <li><a href="*"></a>Instagram</li>
+            <li><a href="*"></a>YouTube</li>
+            <li><a href="*"></a>Tik Tok</li>
         </ul>
-        <div class="hidden">Good Eats</div> <!--???-->
+        <h3>Good Eats</h3>
         <small>Copyright 2022<br>
             Taco Cheesington</small>
         <img src="images/taco-cheesington.png">
