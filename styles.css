@@ -10,16 +10,21 @@ body {
     margin: 0 auto;
     background-color: #f2f2f2;
 }
-a{
+
+a {
     text-decoration: none;
     color: #eb5428;
 }
-a:hover{
+
+a:hover {
     color: hsl(14, 83%, 25%);
 }
-a.hidden{
+
+a.hidden {
     visibility: hidden;
-}a.hidden:hover{
+}
+
+a.hidden:hover {
     visibility: hidden;
 }
 
@@ -35,10 +40,12 @@ h2 {
     text-transform: uppercase;
     font-size: 2.5rem;
 }
-p{
+
+p {
     font-size: 1.1rem;
 }
-li{
+
+li {
     font-size: 1.1rem;
 }
 
@@ -139,7 +146,7 @@ mark {
 }
 
 div#ingredients li {
-    list-style:square;
+    list-style: square;
     margin-left: 5px;
 }
 
@@ -164,10 +171,13 @@ div#details ul {
 aside {
     background-color: #7abfbf;
     margin-top: 0;
+    padding-bottom: 1rem;
+
 }
 
-dt {
-    text-transform: uppercase;
+aside h2 {
+    padding-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 div {
@@ -177,8 +187,9 @@ div {
 
 aside div {
     display: grid;
-    grid-template-columns: .5fr 1fr;
+    grid-template-columns: .6fr 1fr;
     grid-template-rows: .1fr 1fr;
+    padding-bottom: 1rem;
 }
 
 div h3 {
@@ -277,6 +288,7 @@ nav h2:nth-child(2) {
     margin: 0;
     cursor: pointer;
 }
+
 nav h2:nth-child(2):active {
     background-color: hsl(14, 83%, 25%);
 
@@ -316,10 +328,11 @@ nav button {
     border-radius: 5px;
     border-color: #eb5428;
     cursor: pointer;
-    width:40px;
+    width: 40px;
 
 }
-nav button:active{
+
+nav button:active {
     background-color: #fff;
     background-image: url(SVG/search.svg);
 }
@@ -399,6 +412,7 @@ footer {
     background-color: #fff;
     margin-bottom: 40px;
     text-align: center;
+    margin-top: 20px;
 }
 
 footer h2,
@@ -450,14 +464,125 @@ footer small {
 }
 
 @media screen and (min-width:768px) {
-    body {
-        background-color: red;
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 2fr 6fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        height: 160px;
     }
 
-}
-@media screen and (min-width:1280px) {
-    body {
-        background-color: violet;
+    nav h2:nth-child(1) {
+        /*burger*/
+        display: none;
     }
 
-}
+    nav div {
+        /*search*/
+        position: initial;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        height: 55px;
+        margin-top: 10px;
+    }
+
+    nav input {}
+
+    nav h2:nth-child(2) {
+        /*logo*/
+    }
+
+    nav h2:nth-child(4) {
+        /*sign in*/
+        grid-column-start: 4;
+        grid-column-end: 5;
+        padding-top: 45px;
+    }
+
+    menu {
+        visibility: initial;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        width: 90%;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin-top: 25px;
+    }
+
+    menu li {
+        display: inline;
+        font-family: 'Bebas Neue';
+    }
+
+    header {
+        height: 250px;
+        grid-template-rows: 1fr .1fr;
+    }
+
+    header h1 {
+        text-align: left;
+        padding-left: 25px;
+        padding-bottom: 10px;
+    }
+
+    header ul {
+        position: absolute;
+        background-color: rgb(242, 242, 242, .8);
+        top: 250px;
+        left: 10%;
+        right: 10%;
+    }
+
+    section#recipe {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1 3fr;
+    }
+
+    section#recipe div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        text-align: center;
+    }
+
+    section#recipe div:nth-child(2),
+    section#recipe div:nth-child(3) {
+        padding: 10px;
+
+    }
+    aside{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .1fr 2fr 2fr;
+    }
+    aside h2{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 0;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    footer img{
+        grid-row-start: 1;
+    }
+    footer ul{
+        grid-column-start: 2;
+    }
+    footer small{
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width:1280px) {
+        body {
+            background-color: violet;
+        }
+
+    }
